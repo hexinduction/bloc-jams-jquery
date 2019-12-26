@@ -16,7 +16,7 @@
     `);
 
     song.element.on('click', event => {
-      player.playPause(song);
+      player.playPauseAndUpdate(song);
       $('button#play-pause').attr('playState', player.playState);
     });
 
