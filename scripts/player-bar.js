@@ -24,7 +24,7 @@
 
      const prevSongIndex = currentSongIndex - 1;
 
-     if (prevSongIndex === 0) { return; }
+     if (prevSongIndex < 0) { return; }
 
      const prevSong = album.songs[prevSongIndex];
       player.playPause(prevSong);
