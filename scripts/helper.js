@@ -4,9 +4,10 @@ class Helper {
     player.playPause(song);
     var totalTime = player.getDuration();
     $('#time-control .total-time').text(totalTime);
+
   };
 
-
+  
 
 }
 
