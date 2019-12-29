@@ -30,7 +30,7 @@
       helper.playPauseAndUpdate(prevSong);
    });
 
-   $('#time-control input').on('input', function (event) {
+   $('#time-control input').on('input', function () {
      player.skipTo(event.target.value);
    });
 
@@ -40,7 +40,7 @@
      const currentTime = player.getTime();
      const duration = player.getDuration();
      const percent = (currentTime / duration) * 100;
-     $('#time-control .current-time').text(player.prettyTime(totalTime));
+     $('#time-control .current-time').text(player.prettyTime(currentTime));
      $('#time-control input').val(percent);
    }, 1000);
 
