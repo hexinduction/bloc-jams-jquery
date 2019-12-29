@@ -42,11 +42,15 @@
      const percent = (currentTime / duration) * 100;
      $('#time-control .current-time').text(player.prettyTime(currentTime));
      $('#time-control input').val(percent);
+     $('#time-control .total-time').text(player.prettyTime(duration));
    }, 1000);
+
+   $('#time-control .total-time').text(player.prettyTime(totalTime));
 
 
    $('#volume-control input').on('input', function (event) {
       player.setVolume(event.target.value);
     });
+
 
  }
